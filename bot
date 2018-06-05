@@ -1,0 +1,14 @@
+if message.content.contains("http://"):
+        if message.content.contains("google.com") or message.content.contains("youtube.com"):
+            pass
+        else:
+            try:
+                await client.delete_message(message)
+            except:
+                client.say("I need PERMISSIONS :D\n I do not know de wae")
+                client.say("I do not know de wae [going to try and remove message]")
+            try:
+                await client.send_message(message.author,
+                "Posting Links in **" + message.server.name + "** isn't permitted!")
+            except:
+                client.say("I can't message that user!")
